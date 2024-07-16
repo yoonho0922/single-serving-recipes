@@ -1,4 +1,4 @@
-package com.yoon.foundation.javaspringfoundation;
+package com.yoon.foundation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

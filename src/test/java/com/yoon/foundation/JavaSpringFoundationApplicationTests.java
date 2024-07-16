@@ -1,4 +1,4 @@
-package com.yoon.foundation.javaspringfoundation;
+package com.yoon.foundation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
