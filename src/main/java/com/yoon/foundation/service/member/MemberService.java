@@ -66,7 +66,7 @@ public class MemberService {
         if(Objects.isNull(member)){
             throw new EntityNotFoundException("존재하지 않는 유저입니다.");
         }else{
-            double carbonPledge = member.getCarbonPledge();
+            Double carbonPledge = Objects.nonNull(member.getCarbonPledge()) ?member.getCarbonPledge():0;
             member.setCarbonPledge( carbonPledge + finishRequestDTO.getCarbonPledge());
         }
         return CommonResponse.success("유저 탄소 배출 감소량 업데이트 성공");

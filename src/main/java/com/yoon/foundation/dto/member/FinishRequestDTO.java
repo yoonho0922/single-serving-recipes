@@ -9,6 +9,6 @@ import lombok.*;
 @ToString
 public class FinishRequestDTO {
     private Long memberId;
-    private double carbonPledge;
+    private Double carbonPledge;
 
 }

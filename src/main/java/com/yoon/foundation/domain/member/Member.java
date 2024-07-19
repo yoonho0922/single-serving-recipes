@@ -28,10 +28,10 @@ public class Member {
     private Integer satiety;
 
     @Column(name ="service_size")
-    private double servingSize;
+    private Double servingSize;
 
     @Column(name = "carbon_pledge")
-    private double carbonPledge;
+    private Double carbonPledge;
 
     public Member(String name, String email) {
         this.name = name;
