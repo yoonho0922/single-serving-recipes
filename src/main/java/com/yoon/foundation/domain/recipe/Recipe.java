@@ -1,8 +1,10 @@
 package com.yoon.foundation.domain.recipe;
 
-import com.yoon.foundation.domain.recipe.enumtype.RecipeCategory;
 import jakarta.persistence.*;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
@@ -28,4 +30,7 @@ public class Recipe {
 
     @Column
     private String category;
+
+    @Column
+    private String imageS3Path;
 }

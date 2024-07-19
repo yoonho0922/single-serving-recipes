@@ -15,7 +15,7 @@ public class RecipeQueryController {
     @GetMapping("/{recipeId}")
     public CommonResponse<Object> findRecipe(
             @PathVariable("recipeId") Long recipeId,
-            @RequestParam Long memberId
+            @RequestParam("memberId") Long memberId
     )
     {
         return recipeQueryService.findRecipe(recipeId, memberId);
