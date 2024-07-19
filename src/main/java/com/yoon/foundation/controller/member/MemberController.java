@@ -39,7 +39,7 @@ public class MemberController {
     }
 
     @PostMapping("/survey")
-    public CommonResponse<String> survey(@RequestBody SurveyRequestDTO surveyRequestDTO){
+    public CommonResponse<Double> survey(@RequestBody SurveyRequestDTO surveyRequestDTO){
         return memberService.survey(surveyRequestDTO);
     }
 

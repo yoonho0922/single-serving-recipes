@@ -71,14 +71,14 @@ public class MemberService {
     }
 
     @Transactional
-    public CommonResponse<String> survey(SurveyRequestDTO surveyRequestDTO){
+    public CommonResponse<Double> survey(SurveyRequestDTO surveyRequestDTO){
         Member member = memberRepository.findMember(surveyRequestDTO.getMemberId());
         if(Objects.isNull(member)){
             throw new EntityNotFoundException("존재하지 않는 유저입니다.");
         }else{
             member.setServingSize(calculateServingSize(surveyRequestDTO.getScore()));
         }
-        return CommonResponse.success("사용자 정량 업데이트 성공");
+        return CommonResponse.success(member.getServingSize());
     }
 
     private Double calculateServingSize(List<Integer> scores){
