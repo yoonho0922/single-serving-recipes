@@ -1,10 +1,7 @@
 package com.yoon.foundation.controller.member;
 
 import com.yoon.foundation.common.response.CommonResponse;
-import com.yoon.foundation.dto.member.FinishRequestDTO;
-import com.yoon.foundation.dto.member.LoginRequestDTO;
-import com.yoon.foundation.dto.member.FeedbackRequestDTO;
-import com.yoon.foundation.dto.member.SatietyRequestDTO;
+import com.yoon.foundation.dto.member.*;
 import com.yoon.foundation.service.member.MemberQueryService;
 import com.yoon.foundation.service.member.MemberService;
 import lombok.RequiredArgsConstructor;
@@ -39,6 +36,11 @@ public class MemberController {
     @PostMapping("/finish")
     public CommonResponse<String> finish(@RequestBody FinishRequestDTO finishRequestDTO){
         return memberService.finish(finishRequestDTO);
+    }
+
+    @PostMapping("/survey")
+    public CommonResponse<String> survey(@RequestBody SurveyRequestDTO surveyRequestDTO){
+        return memberService.survey(surveyRequestDTO);
     }
 
 
