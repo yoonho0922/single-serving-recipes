@@ -1,7 +1,7 @@
 #!/bin/bash
 
 REPOSITORY=/home/ec2-user/dev/codedeploy
-PROJECT_NAME=java-spring-foundation
+PROJECT_NAME=netst-level
 
 echo "> Build 파일 복사"
 
